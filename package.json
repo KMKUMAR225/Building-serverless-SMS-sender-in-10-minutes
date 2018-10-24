@@ -1,0 +1,7 @@
+{
+  "name": "Building-serverless-SMS-sender-in-10-minutes",
+  "version": "1.0.0",
+  "dependencies": {
+    "aws-sdk": "2.176.0"
+  }
+}
