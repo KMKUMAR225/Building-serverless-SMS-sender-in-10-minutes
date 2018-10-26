@@ -9,7 +9,7 @@ exports.handler = function (event, context, callback) {
 
     console.log("sending message", message, "to receiver", receiver);
     sns.publish({
-        Message: 'hi,how are you',
+        Message: message,
         MessageAttributes: {
             'AWS.SNS.SMS.SMSType': {
                 DataType: 'String',
@@ -17,10 +17,10 @@ exports.handler = function (event, context, callback) {
             },
             'AWS.SNS.SMS.SenderID': {
                 DataType: 'String',
-                StringValue: 'Z1UJRXOUMOOFQ8'
+                StringValue: sender
             }
         },
-        PhoneNumber: '+91728816344'
+        PhoneNumber: receiver
     }).promise()
         .then(data => {
             // your code goes here
