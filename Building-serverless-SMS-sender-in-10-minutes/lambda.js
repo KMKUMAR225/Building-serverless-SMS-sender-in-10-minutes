@@ -17,7 +17,7 @@ exports.handler = function (event, context, callback) {
             },
             'AWS.SNS.SMS.SenderID': {
                 DataType: 'String',
-                StringValue: sender
+                StringValue: 'MYID'
             }
         },
         PhoneNumber: '+91728816344'
