@@ -9,7 +9,7 @@ exports.handler = function (event, context, callback) {
 
     console.log("sending message", message, "to receiver", receiver);
     sns.publish({
-        Message: message,
+        Message: 'hi,how r u',
         MessageAttributes: {
             'AWS.SNS.SMS.SMSType': {
                 DataType: 'String',
